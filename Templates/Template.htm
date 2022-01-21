@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <title>Result</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" type="text/css" href="../Static/CSS/bootstrap.min.css">
+     <script type="text/javascript" src="../Static/JS/jquery-3.5.1.slim.min.js"></script>
+     <script type="text/javascript" src="../Static/JS/popper.min.js"></script>
+     <script type="text/javascript" src="../Static/JS/bootstrap.min.js"></script>
+     <!-- DataTable Files -->
+     <link rel="stylesheet" type="text/css" href="../Static/DataTables/datatables.min.css"/>
+     <script type="text/javascript" src="../Static/DataTables/datatables.min.js"></script>
+  </head>
+  <body>
+    <nav>
+      <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <a class="nav-item nav-link active" id="nav-System-Status-tab" data-toggle="tab" href="#System" role="tab" aria-controls="nav-SystemStatus" aria-selected="true">System</a>
+        <a class="nav-item nav-link" id="nav-Session-Status-tab" data-toggle="tab" href="#Sessions" role="tab" aria-controls="nav-SessionStatus" aria-selected="false">Sessions</a>
+        <a class="nav-item nav-link" id="nav-Route-Status-tab" data-toggle="tab" href="#Routes" role="tab" aria-controls="nav-RouteStatus" aria-selected="false">Routes</a>
+        <a class="nav-item nav-link" id="nav-Log-Details-tab" data-toggle="tab" href="#Log-Details" role="tab" aria-controls="nav-LogDetails" aria-selected="false">Log Details</a>
+      </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane fade show active" id="System" role="tabpanel" aria-labelledby="nav-System-Status-tab">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-4">
+              <h2 class="bg-info text-white text-center p-2 mt-2">Interface Checking</h2>
+              <table class="table table-hover">
+                <tr class="table-secondary" align="left">
+                  <th> Interface </th>
+                  <th> Parameter </th>
+                  <th> State </th>
+                </tr>
+                {% for i in InterfaceCmdExeName %}
+                {% set InterfaceName = InterfaceCmdExeName[loop.index-1] %}
+                {% set ParameterName = InterfaceCmdExeParamName[loop.index-1] %}
+                {% set StateName = InterfaceCmdExeStateName[loop.index-1] %}
+                <tr align="left">
+                  <td>{{ InterfaceName }}</td>
+                  <td>{{ ParameterName }}</td>
+                  <td>{{ StateName }}</td>
+                </tr>
+                {% endfor %}
+              </table>
+            </div>
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4"></div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-3" style="background-color:lavender;">
+              <h2 class="bg-info text-white text-center p-2 mt-2">CPU Checking</h2>
+              <table class="table table-hover">
+              <tr class="table-secondary" align="left">
+                <th>Name</th>
+                <th>Idle</th>
+                <th>State</th>
+              </tr>
+              {% for i in SystemCmdExeCpuUsageCPUName %}
+              {% set CPUName = SystemCmdExeCpuUsageCPUName[loop.index-1] %}
+              {% set IdlePercent = SystemCmdExeCpuIdlePercent[loop.index-1] %}
+              {% set StateName = SystemCmdExeCpuStateName[loop.index-1] %}
+              <tr>
+                <td>{{ CPUName }}</td>
+                <td>{{ IdlePercent }}%</td>
+                <td>{{ StateName }}</td>
+              </tr>
+              {% endfor %}
+            </table>
+            </div>
+            <div class="col-sm-3" style="background-color:lavenderblush;">
+              <h2 class="bg-info text-white text-center p-2 mt-2">Memory Checking</h2>
+              <table class="table table-hover">
+                <tr class="table-secondary" align="left">
+                  <th>Memory</th>
+                  <th>Size (Byte)</th>
+                  <th>Size (%)</th>
+                </tr>
+                {% for i in SystemCmdExeMemUsageMemoryName %}
+                {% set MemoryName = SystemCmdExeMemUsageMemoryName[loop.index-1] %}
+                {% set MemorySizeInByte = SystemCmdExeMemSizeInByte[loop.index-1] %}
+                {% set MemorySizeInPercent = SystemCmdExeMemSizeInPercent[loop.index-1] %}
+                <tr>
+                  <td>{{ MemoryName }}</td>
+                  <td>{{ MemorySizeInByte }}</td>
+                  <td>{{ MemorySizeInPercent }}%</td>
+              </tr>
+                {% endfor %}
+              </table>
+            </div>
+            <div class="col-sm-3" style="background-color:lavender;">
+              <h2 class="bg-info text-white text-center p-2 mt-2">CPU Temperature</h2>
+              <table class="table table-hover">
+                <tr class="table-secondary" align="left">
+                  <th>Name</th>
+                  <th>Temp</th>
+                  <th>State</th>
+                </tr>
+                {% for i in SystemCmdExeCpuTempCPUName %}
+                {% set CPUName = SystemCmdExeCpuTempCPUName[loop.index-1] %}
+                {% set Degree = SystemCmdExeCpuTempDegree[loop.index-1] %}
+                {% set StateName = SystemCmdExeCpuTempState[loop.index-1] %}
+                <tr>
+                  <td>{{ CPUName }}</td>
+                  <td>{{ Degree }}</td>
+                  <td>{{ StateName }}</td>
+                </tr>
+                {% endfor %}
+              </table>
+            </div>
+            <div class="col-sm-3" style="background-color:lavenderblush;">
+              <h2 class="bg-info text-white text-center p-2 mt-2">Power Temperature</h2>
+              <table class="table table-hover">
+                <tr class="table-secondary" align="left">
+                  <th>Name</th>
+                  <th>Temp</th>
+                  <th>State</th>
+                </tr>
+                {% for i in SystemCmdExePwrTempPwrName %}
+                {% set PowerName = SystemCmdExePwrTempPwrName[loop.index-1] %}
+                {% set Temperature = SystemCmdExePwrTempDegree[loop.index-1] %}
+                {% set StateName = SystemCmdExePwrTempState[loop.index-1] %}
+                <tr>
+                  <td>{{ PowerName }}</td>
+                  <td>{{ Temperature }}</td>
+                  <td>{{ StateName }}</td>
+                </tr>
+                {% endfor %}
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="Sessions" role="tabpanel" aria-labelledby="nav-Session-Status-tab">
+        <div class="container-fluid">
+          <div class="row">
+            {% for i in SessionStatusCmdExeSessionName %}
+            {% set SessionName = SessionStatusCmdExeSessionName[loop.index-1] %}
+            {% set TotalSession = SessionStatusCmdExeTotalSession[loop.index-1] %}
+            <h2 class="bg-info text-white text-center p-2 m-2">Session Checking: {{ SessionName }}</h2>
+            <h3 class="bg-danger text-white text-center p-2 mt-2">Total session {{ TotalSession }}</h3>
+            <div class="container-fluid">
+              <table id="" class="display table-striped table-bordered m-2">
+                <thead>
+                  <th>Session No.</th>
+                  <th>Protocol</th>
+                  <th>Protocol State</th>
+                  <th>Session Uniquer</th>
+                  <th>Session Duration</th>
+                  <th>Policy ID</th>
+                  <th>vdom Name</th>
+              </thead>
+                <tbody>
+                  {% for i in SessionStatusCmdExeSameSessions %}
+                    {% set SameSessions = SessionStatusCmdExeSameSessions[loop.index-1] %}
+                    {% if SameSessions == SessionName %}
+                      {% set SessionNo = SessionStatusCmdExeSessionID[loop.index-1] %}
+                      {% set Protocols = SessionStatusCmdExeProtocols[loop.index-1] %}
+                      {% set ProtocolStates = SessionStatusCmdExeProtocolStates[loop.index-1] %}
+                      {% set SessionUnic = SessionStatusCmdExeSessionUnic[loop.index-1] %}
+                      {% set SessionDur = SessionStatusCmdExeSessionDur[loop.index-1] %}
+                      {% set PolicyID = SessionStatusCmdExePolicyID[loop.index-1] %}
+                      {% set VdomNames = SessionStatusCmdExeVdomNames[loop.index-1] %}
+                      <tr>
+                        <td>{{ SessionNo }}</td>
+                        <td>{{ Protocols }}</td>
+                        <td>{{ ProtocolStates }}</td>
+                        <td>{{ SessionUnic }}</td>
+                        <td>{{ SessionDur }}</td>
+                        <td>{{ PolicyID }}</td>
+                        <td>{{ VdomNames }}</td>
+                      </tr>
+                    {% endif %}
+                  {% endfor %}
+                </tbody>
+              </table>
+            {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="Routes" role="tabpanel" aria-labelledby="nav-Route-Status-tab">
+        <div class="container-fluid">
+          <div class="row">
+            {% for RouteName in RoutingCmdExeRouteName %}
+            <h2 class="bg-info text-white text-center p-2 m-2">Route Checking: {{ RouteName }}</h2>
+            <div class="container-fluid">
+              <table class="table table-hover">
+                <tr class="table-secondary" align="left">
+                  <th>Routing Type</th>
+                  <th>Default Gateway</th>
+                  <th>vdom Name</th>
+                </tr>
+                {% for i in RoutingCmdExeSameRouteNames %}
+                  {% set SameRouteNames = RoutingCmdExeSameRouteNames[loop.index-1] %}
+                  {% if SameRouteNames == RouteName %}
+                    {% set RoutingType = RoutingCmdExeRouteType[loop.index-1] %}
+                    {% set DefaultGateway = RoutingCmdExeRouteDefaultGateway[loop.index-1] %}
+                    {% set VdomNames = RoutingCmdExeRouteVdomNames[loop.index-1] %}
+                    <tr>
+                      <td>{{ RoutingType }}</td>
+                      <td>{{ DefaultGateway }}</td>
+                      <td>{{ VdomNames }}</td>
+                    </tr>
+                  {% endif %}
+                {% endfor %}
+              </table>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="Log-Details" role="tabpanel" aria-labelledby="nav-Log-Details-tab">
+        <div class="container-fluid mt-2">
+          <div id="accordion">
+            <div class="card">
+              <div class="card-header">
+                <a class="card-link" data-toggle="collapse" href="#Interface_Log_Details">Interface Log Details</a>
+              </div>
+              <div id="Interface_Log_Details" class="collapse" data-parent="#accordion">
+                <div class="card-body">
+                  <p> {{ InterfaceLogDetails }} </p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <a class="collapsed card-link" data-toggle="collapse" href="#CPU_Log_Details">CPU Log Details</a>
+              </div>
+              <div id="CPU_Log_Details" class="collapse" data-parent="#accordion">
+                <div class="card-body">
+                  <p> {{ CPULogDetails }} </p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <a class="collapsed card-link" data-toggle="collapse" href="#Memory_Log_Details">Memory Log Details</a>
+              </div>
+              <div id="Memory_Log_Details" class="collapse" data-parent="#accordion">
+                <div class="card-body">
+                  <p> {{ MemoryLogDetails }} </p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <a class="collapsed card-link" data-toggle="collapse" href="#CPU_Temperature_Log_Details">CPU Temperature Log Details</a>
+              </div>
+              <div id="CPU_Temperature_Log_Details" class="collapse" data-parent="#accordion">
+                <div class="card-body">
+                  <p> {{ CPUTemperatureLogDetails }} </p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <a class="collapsed card-link" data-toggle="collapse" href="#Power_Temperature_Log_Details">Power Temperature Log Details</a>
+              </div>
+              <div id="Power_Temperature_Log_Details" class="collapse" data-parent="#accordion">
+                <div class="card-body">
+                  <p> {{ PowerTemperatureLogDetails }} </p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <a class="collapsed card-link" data-toggle="collapse" href="#Session_Log_Details">Session Log Details</a>
+              </div>
+              <div id="Session_Log_Details" class="collapse" data-parent="#accordion">
+                <div class="card-body">
+                  <p> {{ SessionLogDetails }} </p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <a class="collapsed card-link" data-toggle="collapse" href="#Route_Log_Details">Route Log Details</a>
+              </div>
+              <div id="Route_Log_Details" class="collapse" data-parent="#accordion">
+                <div class="card-body">
+                  <p> {{ RouteLogDetails }} </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  	<script>
+       $(document).ready(function() {
+       $('table.display').DataTable();
+       } );
+    </script>
+  </body>
+</html>

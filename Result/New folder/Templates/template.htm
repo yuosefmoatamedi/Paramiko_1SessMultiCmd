@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Result</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+        .collapsible {
+          background-color: #777;
+          color: white;
+          cursor: pointer;
+          padding: 18px;
+          width: 100%;
+          border: none;
+          text-align: left;
+          outline: none;
+          font-size: 15px;
+        }
+        .active, .collapsible:hover {
+          background-color: #555;
+        }
+        .content {
+          padding: 0 18px;
+          width: 100%;
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.2s ease-out;
+          background-color: #f1f1f1;
+        }
+        .SystemPreformancecolumn {
+          float: left;
+          width: 25%;
+        }
+        /*
+        .SystemPreformancecolumn:hover {
+          background-color: #f1f1f1;
+        }
+        */
+        .Session {
+          float: left;
+          width: 100%;
+        }
+        /* Clear floats after the columns */
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+        .SystemPreformancecolumn {
+            width: 100%;
+        }
+      }
+    </style>
+    </head>
+    <body>
+        <div class="row">
+            <div class="Interface">
+                <h2>Interface Checking</h2>
+                <table style="width:20%">
+                    <tr align="left">
+                        <th> Interface </th>
+                        <th> Parameter </th>
+                        <th> State </th>
+                    </tr>
+                    {% for i in InterfaceCmdExeName %}
+                        {% set InterfaceName = InterfaceCmdExeName[loop.index-1] %}
+                        {% set ParameterName = InterfaceCmdExeParamName[loop.index-1] %}
+                        {% set StateName = InterfaceCmdExeStateName[loop.index-1] %}
+                        <tr align="left">
+                              <td>{{ InterfaceName }}</td>
+                              <td>{{ ParameterName }}</td>
+                              <td>{{ StateName }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="SystemPerf">
+                <div>
+                    <br/>
+                    <div class="SystemPreformancecolumn">
+                        <h2>CPU Checking</h2>
+                        <table style="width:80%">
+                            <tr align="left">
+                                <th>Name</th>
+                                <th>Idle</th>
+                                <th>State</th>
+                            </tr>
+                            {% for i in SystemCmdExeCpuUsageCPUName %}
+                                {% set CPUName = SystemCmdExeCpuUsageCPUName[loop.index-1] %}
+                                {% set IdlePercent = SystemCmdExeCpuIdlePercent[loop.index-1] %}
+                                {% set StateName = SystemCmdExeCpuStateName[loop.index-1] %}
+                                <tr>
+                                    <td>{{ CPUName }}</td>
+                                    <td>{{ IdlePercent }}%</td>
+                                    <td>{{ StateName }}</td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                    <div class="SystemPreformancecolumn">
+                        <h2>Memory Checking</h2>
+                        <table style="width:80%">
+                            <tr align="left">
+                                <th>Memory</th>
+                                <th>Size (Byte)</th>
+                                <th>Size (%)</th>
+                            </tr>
+                            {% for i in SystemCmdExeMemUsageMemoryName %}
+                                {% set MemoryName = SystemCmdExeMemUsageMemoryName[loop.index-1] %}
+                                {% set MemorySizeInByte = SystemCmdExeMemSizeInByte[loop.index-1] %}
+                                {% set MemorySizeInPercent = SystemCmdExeMemSizeInPercent[loop.index-1] %}
+                                <tr>
+                                    <td>{{ MemoryName }}</td>
+                                    <td>{{ MemorySizeInByte }}</td>
+                                    <td>{{ MemorySizeInPercent }}%</td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                    <div class="SystemPreformancecolumn">
+					    <h2>CPU Temperature</h2>
+					    <table style="width:80%">
+						    <tr align="left">
+                                <th>Name</th>
+						        <th>Temp</th>
+						        <th>State</th>
+						    </tr>
+                            {% for i in SystemCmdExeCpuTempCPUName %}
+                                {% set CPUName = SystemCmdExeCpuTempCPUName[loop.index-1] %}
+                                {% set Degree = SystemCmdExeCpuTempDegree[loop.index-1] %}
+                                {% set StateName = SystemCmdExeCpuTempState[loop.index-1] %}
+                                <tr>
+                                    <td>{{ CPUName }}</td>
+                                    <td>{{ Degree }}</td>
+                                    <td>{{ StateName }}</td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+				    </div>
+                    <div class="SystemPreformancecolumn">
+					    <h2>Power Temperature</h2>
+					    <table style="width:80%">
+                            <tr align="left">
+                                <th>Name</th>
+                                <th>Temp</th>
+                                <th>State</th>
+                            </tr>
+                            {% for i in SystemCmdExePwrTempPwrName %}
+                                {% set PowerName = SystemCmdExePwrTempPwrName[loop.index-1] %}
+                                {% set Temperature = SystemCmdExePwrTempDegree[loop.index-1] %}
+                                {% set StateName = SystemCmdExePwrTempState[loop.index-1] %}
+                                <tr>
+                                    <td>{{ PowerName }}</td>
+                                    <td>{{ Temperature }}</td>
+                                    <td>{{ StateName }}</td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+				    </div>
+			    </div>
+		    </div>
+	    </div>
+	    <br/>
+        <div class="row">
+            <div class="Session">
+                {% for i in SessionStatusCmdExeSessionName %}
+                    {% set SessionName = SessionStatusCmdExeSessionName[loop.index-1] %}
+                    {% set TotalSession = SessionStatusCmdExeTotalSession[loop.index-1] %}
+                    <h2>Session Checking: {{ SessionName }}</h2>
+                    <h3>Total session {{ TotalSession }}</h3>
+                    <tr align="left">
+                    <table style="width:80%">
+                        <tr align="left">
+                            <th>Session No.</th>
+                            <th>Protocol</th>
+                            <th>Protocol State</th>
+                            <th>Session Uniquer</th>
+                            <th>Session Duration</th>
+                            <th>Policy ID</th>
+                            <th>vdom Name</th>
+                        </tr>
+                        {% for i in SessionStatusCmdExeSameSessions %}
+                            {% set SameSessions = SessionStatusCmdExeSameSessions[loop.index-1] %}
+                            {% if SameSessions == SessionName %}
+                                {% set SessionNo = SessionStatusCmdExeSessionID[loop.index-1] %}
+                                {% set Protocols = SessionStatusCmdExeProtocols[loop.index-1] %}
+                                {% set ProtocolStates = SessionStatusCmdExeProtocolStates[loop.index-1] %}
+                                {% set SessionUnic = SessionStatusCmdExeSessionUnic[loop.index-1] %}
+                                {% set SessionDur = SessionStatusCmdExeSessionDur[loop.index-1] %}
+                                {% set PolicyID = SessionStatusCmdExePolicyID[loop.index-1] %}
+                                {% set VdomNames = SessionStatusCmdExeVdomNames[loop.index-1] %}
+                                <tr>
+                                    <td>{{ SessionNo }}</td>
+                                    <td>{{ Protocols }}</td>
+                                    <td>{{ ProtocolStates }}</td>
+                                    <td>{{ SessionUnic }}</td>
+                                    <td>{{ SessionDur }}</td>
+                                    <td>{{ PolicyID }}</td>
+                                    <td>{{ VdomNames }}</td>
+                                </tr>
+                            {% endif %}
+                        {% endfor %}
+                    </table>
+                {% endfor %}
+	        </div>
+	    </div>
+	    <br/>
+        <div class="row">
+            <div class="Route">
+                {% for RouteName in RoutingCmdExeRouteName %}
+                <h2>Route Checking: {{ RouteName }}</h2>
+                    <table style="width:60%">
+                        <tr align="left">
+                            <th>Routing Type</th>
+                            <th>Default Gateway</th>
+                            <th>vdom Name</th>
+                        </tr>
+                        {% for i in RoutingCmdExeSameRouteNames %}
+                            {% set SameRouteNames = RoutingCmdExeSameRouteNames[loop.index-1] %}
+                            {% if SameRouteNames == RouteName %}
+                                {% set RoutingType = RoutingCmdExeRouteType[loop.index-1] %}
+                                {% set DefaultGateway = RoutingCmdExeRouteDefaultGateway[loop.index-1] %}
+                                {% set VdomNames = RoutingCmdExeRouteVdomNames[loop.index-1] %}
+                                    <tr>
+                                        <td>{{ RoutingType }}</td>
+                                        <td>{{ DefaultGateway }}</td>
+                                        <td>{{ VdomNames }}</td>
+                                    </tr>
+                            {% endif %}
+                        {% endfor %}
+                    </table>
+                {% endfor %}
+            </div>
+        </div>
+	    <br/>
+        <div class="row">
+            <div class="Details">
+                <div>
+                    <button class="collapsible">Interface Log Details</button>
+                    <div class="content">
+                        <p> {{ InterfaceLogDetails }} </p>
+                    </div>
+                    <button class="collapsible">CPU Log Details</button>
+                    <div class="content">
+                        <p> {{ CPULogDetails }} </p>
+                    </div>
+                    <button class="collapsible">Memory Log Details</button>
+                    <div class="content">
+                        <p> {{ MemoryLogDetails }} </p>
+                    </div>
+                    <button class="collapsible">CPU Temperature Log Details</button>
+                    <div class="content">
+                        <p> {{ CPUTemperatureLogDetails }} </p>
+                    </div>
+                    <button class="collapsible">Power Temperature Log Details</button>
+                    <div class="content">
+                        <p> {{ PowerTemperatureLogDetails }} </p>
+                    </div>
+                    <button class="collapsible">Session Log Details</button>
+                    <div class="content">
+                        <p> {{ SessionLogDetails }} </p>
+                    </div>
+                    <button class="collapsible">Route Log Details</button>
+                    <div class="content">
+                        <p> {{ RouteLogDetails }} </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+  	<script>
+          var coll = document.getElementsByClassName("collapsible");
+          var i;
+          for (i = 0; i < coll.length; i++)
+          {
+              coll[i].addEventListener("click", function()
+              {
+                  this.classList.toggle("active");
+                  var content = this.nextElementSibling;
+                  if (content.style.maxHeight)
+                  {
+                      content.style.maxHeight = null;
+                  }
+                  else
+                  {
+                      content.style.maxHeight = content.scrollHeight + "px";
+                  }
+              });
+          }
+      </script>
+  </body>
+</html>

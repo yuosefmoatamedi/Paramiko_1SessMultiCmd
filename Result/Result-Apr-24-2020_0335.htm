@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Result</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../Static/CSS/bootstrap.min.css">
+  <script type="text/javascript" src="../Static/JS/jquery-3.5.1.slim.min.js"></script>
+  <script type="text/javascript" src="../Static/JS/popper.min.js"></script>
+  <script type="text/javascript" src="../Static/JS/bootstrap.min.js"></script>
+  <!-- DataTable Files -->
+  <link rel="stylesheet" type="text/css" href="../Static/DataTables/datatables.min.css"/>
+  <script type="text/javascript" src="../Static/DataTables/datatables.min.js"></script>
+</head>
+<body>
+  <nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <a class="nav-item nav-link active" id="nav-System-Status-tab" data-toggle="tab" href="#System" role="tab" aria-controls="nav-SystemStatus" aria-selected="true">System</a>
+      <a class="nav-item nav-link" id="nav-Session-Status-tab" data-toggle="tab" href="#Sessions" role="tab" aria-controls="nav-SessionStatus" aria-selected="false">Sessions</a>
+      <a class="nav-item nav-link" id="nav-Route-Status-tab" data-toggle="tab" href="#Routes" role="tab" aria-controls="nav-RouteStatus" aria-selected="false">Routes</a>
+      <a class="nav-item nav-link" id="nav-Log-Details-tab" data-toggle="tab" href="#Log-Details" role="tab" aria-controls="nav-LogDetails" aria-selected="false">Log Details</a>
+    </div>
+  </nav>
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="System" role="tabpanel" aria-labelledby="nav-System-Status-tab">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-4">
+            <h2 class="bg-info text-white text-center p-2 mt-2">Interface Checking</h2>
+            <table class="table table-hover">
+              <tr class="table-secondary" align="left">
+                <th> Interface </th>
+                <th> Parameter </th>
+                <th> State </th>
+              </tr>
+              <tr align="left">
+                <td>port16</td>
+                <td>Status</td>
+                <td>up</td>
+              </tr>
+              <tr align="left">
+                <td>port1</td>
+                <td>Status</td>
+                <td>down</td>
+              </tr>
+            </table>
+          </div>
+          <div class="col-sm-4"></div>
+          <div class="col-sm-4"></div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-3" style="background-color:lavender;">
+            <h2 class="bg-info text-white text-center p-2 mt-2">CPU Checking</h2>
+            <table class="table table-hover">
+              <tr class="table-secondary" align="left">
+                <th>Name</th>
+                <th>Idle</th>
+                <th>State</th>
+              </tr>
+              <tr>
+                <td>CPU</td>
+                <td>95%</td>
+                <td>Normal</td>
+              </tr>
+              <tr>
+                <td>CPU0</td>
+                <td>97%</td>
+                <td>Normal</td>
+              </tr>
+              <tr>
+                <td>CPU1</td>
+                <td>100%</td>
+                <td>Normal</td>
+              </tr>
+              <tr>
+                <td>CPU2</td>
+                <td>94%</td>
+                <td>Normal</td>
+              </tr>
+              <tr>
+                <td>CPU3</td>
+                <td>100%</td>
+                <td>Normal</td>
+              </tr>
+              <tr>
+                <td>CPU4</td>
+                <td>96%</td>
+                <td>Normal</td>
+              </tr>
+              <tr>
+                <td>CPU5</td>
+                <td>92%</td>
+                <td>Normal</td>
+              </tr>
+              <tr>
+                <td>CPU6</td>
+                <td>90%</td>
+                <td>Normal</td>
+              </tr>
+              <tr>
+                <td>CPU7</td>
+                <td>89%</td>
+                <td>Normal</td>
+              </tr>
+              <tr>
+                <td>CPU8</td>
+                <td>89%</td>
+                <td>Normal</td>
+              </tr>
+              <tr>
+                <td>CPU9</td>
+                <td>92%</td>
+                <td>Normal</td>
+              </tr>
+              <tr>
+                <td>CPU10</td>
+                <td>99%</td>
+                <td>Normal</td>
+              </tr>
+              <tr>
+                <td>CPU11</td>
+                <td>98%</td>
+                <td>Normal</td>
+              </tr>
+            </table>
+          </div>
+          <div class="col-sm-3" style="background-color:lavenderblush;">
+            <h2 class="bg-info text-white text-center p-2 mt-2">Memory Checking</h2>
+            <table class="table table-hover">
+              <tr class="table-secondary" align="left">
+                <th>Memory</th>
+                <th>Size (Byte)</th>
+                <th>Size (%)</th>
+              </tr>
+              <tr>
+                <td>Total</td>
+                <td>32 GB</td>
+                <td>100%</td>
+              </tr>
+              <tr>
+                <td>Free</td>
+                <td>24 GB</td>
+                <td>75%</td>
+              </tr>
+              <tr>
+                <td>Used</td>
+                <td>8 GB</td>
+                <td>25%</td>
+              </tr>
+            </table>
+          </div>
+          <div class="col-sm-3" style="background-color:lavender;">
+            <h2 class="bg-info text-white text-center p-2 mt-2">CPU Temperature</h2>
+            <table class="table table-hover">
+              <tr class="table-secondary" align="left">
+                <th>Name</th>
+                <th>Temp</th>
+                <th>State</th>
+              </tr>
+              <tr>
+                <td>Core 0</td>
+                <td>45</td>
+                <td>Normal</td>
+              </tr>
+              <tr>
+                <td>Core 1</td>
+                <td>46</td>
+                <td>Normal</td>
+              </tr>
+              <tr>
+                <td>Core 2</td>
+                <td>46</td>
+                <td>Normal</td>
+              </tr>
+              <tr>
+                <td>Core 3</td>
+                <td>45</td>
+                <td>Normal</td>
+              </tr>
+              <tr>
+                <td>Core 4</td>
+                <td>45</td>
+                <td>Normal</td>
+              </tr>
+              <tr>
+                <td>Core 5</td>
+                <td>46</td>
+                <td>Normal</td>
+              </tr>
+            </table>
+          </div>
+          <div class="col-sm-3" style="background-color:lavenderblush;">
+            <h2 class="bg-info text-white text-center p-2 mt-2">Power Temperature</h2>
+            <table class="table table-hover">
+              <tr class="table-secondary" align="left">
+                <th>Name</th>
+                <th>Temp</th>
+                <th>State</th>
+              </tr>
+              <tr>
+                <td>PS1</td>
+                <td>22</td>
+                <td>Normal</td>
+              </tr>
+              <tr>
+                <td>PS2</td>
+                <td>20</td>
+                <td>Normal</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="Sessions" role="tabpanel" aria-labelledby="nav-Session-Status-tab">
+      <div class="container-fluid">
+        <div class="row">
+          <h2 class="bg-info text-white text-center p-2 m-2">Session Checking: 2ndSW Router_140.30 to FoSrv_154.180</h2>
+          <h3 class="bg-danger text-white text-center p-2 mt-2">Total session 20</h3>
+          <div class="container-fluid">
+            <table id="" class="display table-striped table-bordered m-2">
+            <thead>
+              <th>Session No.</th>
+              <th>Protocol</th>
+              <th>Protocol State</th>
+              <th>Session Uniquer</th>
+              <th>Session Duration</th>
+              <th>Policy ID</th>
+              <th>vdom Name</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>TCP</td>
+                <td>ESTABLISHED</td>
+                <td>172.19.140.30:51518->172.19.154.180:1433</td>
+                <td>575</td>
+                <td>349</td>
+                <td>DC</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>TCP</td>
+                <td>ESTABLISHED</td>
+                <td>172.19.140.30:51644->172.19.154.180:1433</td>
+                <td>574</td>
+                <td>349</td>
+                <td>DC</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>TCP</td>
+                <td>ESTABLISHED</td>
+                <td>172.19.140.30:51635->172.19.154.180:1433</td>
+                <td>574</td>
+                <td>349</td>
+                <td>DC</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>TCP</td>
+                <td>ESTABLISHED</td>
+                <td>172.19.140.30:51770->172.19.154.180:1433</td>
+                <td>574</td>
+                <td>349</td>
+                <td>DC</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>TCP</td>
+                <td>ESTABLISHED</td>
+                <td>172.19.140.30:58065->172.19.154.180:1433</td>
+                <td>141226</td>
+                <td>349</td>
+                <td>DC</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>TCP</td>
+                <td>ESTABLISHED</td>
+                <td>172.19.140.30:51466->172.19.154.180:1433</td>
+                <td>575</td>
+                <td>349</td>
+                <td>DC</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>TCP</td>
+                <td>ESTABLISHED</td>
+                <td>172.19.140.30:65289->172.19.154.180:1433</td>
+                <td>2473</td>
+                <td>349</td>
+                <td>DC</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>TCP</td>
+                <td>ESTABLISHED</td>
+                <td>172.19.140.30:51614->172.19.154.180:1433</td>
+                <td>574</td>
+                <td>349</td>
+                <td>DC</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>TCP</td>
+                <td>ESTABLISHED</td>
+                <td>172.19.140.30:58076->172.19.154.180:1433</td>
+                <td>141196</td>
+                <td>349</td>
+                <td>DC</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>TCP</td>
+                <td>ESTABLISHED</td>
+                <td>172.19.140.30:51746->172.19.154.180:1433</td>
+                <td>574</td>
+                <td>349</td>
+                <td>DC</td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>TCP</td>
+                <td>ESTABLISHED</td>
+                <td>172.19.140.30:51733->172.19.154.180:1433</td>
+                <td>574</td>
+                <td>349</td>
+                <td>DC</td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>TCP</td>
+                <td>ESTABLISHED</td>
+                <td>172.19.140.30:51610->172.19.154.180:1433</td>
+                <td>575</td>
+                <td>349</td>
+                <td>DC</td>
+              </tr>
+              <tr>
+                <td>13</td>
+                <td>TCP</td>
+                <td>ESTABLISHED</td>
+                <td>172.19.140.30:51545->172.19.154.180:1433</td>
+                <td>575</td>
+                <td>349</td>
+                <td>DC</td>
+              </tr>
+              <tr>
+                <td>14</td>
+                <td>TCP</td>
+                <td>ESTABLISHED</td>
+                <td>172.19.140.30:51052->172.19.154.180:1433</td>
+                <td>576</td>
+                <td>349</td>
+                <td>DC</td>
+              </tr>
+              <tr>
+                <td>15</td>
+                <td>TCP</td>
+                <td>ESTABLISHED</td>
+                <td>172.19.140.30:51698->172.19.154.180:1433</td>
+                <td>574</td>
+                <td>349</td>
+                <td>DC</td>
+              </tr>
+              <tr>
+                <td>16</td>
+                <td>TCP</td>
+                <td>ESTABLISHED</td>
+                <td>172.19.140.30:51824->172.19.154.180:1433</td>
+                <td>574</td>
+                <td>349</td>
+                <td>DC</td>
+              </tr>
+              <tr>
+                <td>17</td>
+                <td>TCP</td>
+                <td>ESTABLISHED</td>
+                <td>172.19.140.30:51557->172.19.154.180:1433</td>
+                <td>575</td>
+                <td>349</td>
+                <td>DC</td>
+              </tr>
+              <tr>
+                <td>18</td>
+                <td>TCP</td>
+                <td>ESTABLISHED</td>
+                <td>172.19.140.30:65321->172.19.154.180:1433</td>
+                <td>2390</td>
+                <td>349</td>
+                <td>DC</td>
+              </tr>
+              <tr>
+                <td>19</td>
+                <td>TCP</td>
+                <td>ESTABLISHED</td>
+                <td>172.19.140.30:51495->172.19.154.180:1433</td>
+                <td>575</td>
+                <td>349</td>
+                <td>DC</td>
+              </tr>
+              <tr>
+                <td>20</td>
+                <td>TCP</td>
+                <td>ESTABLISHED</td>
+                <td>172.19.140.30:51815->172.19.154.180:1433</td>
+                <td>574</td>
+                <td>349</td>
+                <td>DC</td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
+        </div>
+        <div class="row">
+          <h2 class="bg-info text-white text-center p-2 m-2">Session Checking: 2ndSW Router_140.30 to FoSrv_154.180</h2>
+          <h3 class="bg-danger text-white text-center p-2 mt-2">Total session 20</h3>
+          <div class="container-fluid">
+            <table id="" class="display table-striped table-bordered m-2">
+              <thead>
+                <th>Session No.</th>
+                <th>Protocol</th>
+                <th>Protocol State</th>
+                <th>Session Uniquer</th>
+                <th>Session Duration</th>
+                <th>Policy ID</th>
+                <th>vdom Name</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>TCP</td>
+                  <td>ESTABLISHED</td>
+                  <td>172.19.140.30:51518->172.19.154.180:1433</td>
+                  <td>575</td>
+                  <td>349</td>
+                  <td>DC</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>TCP</td>
+                  <td>ESTABLISHED</td>
+                  <td>172.19.140.30:51644->172.19.154.180:1433</td>
+                  <td>574</td>
+                  <td>349</td>
+                  <td>DC</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>TCP</td>
+                  <td>ESTABLISHED</td>
+                  <td>172.19.140.30:51635->172.19.154.180:1433</td>
+                  <td>574</td>
+                  <td>349</td>
+                  <td>DC</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>TCP</td>
+                  <td>ESTABLISHED</td>
+                  <td>172.19.140.30:51770->172.19.154.180:1433</td>
+                  <td>574</td>
+                  <td>349</td>
+                  <td>DC</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>TCP</td>
+                  <td>ESTABLISHED</td>
+                  <td>172.19.140.30:58065->172.19.154.180:1433</td>
+                  <td>141226</td>
+                  <td>349</td>
+                  <td>DC</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>TCP</td>
+                  <td>ESTABLISHED</td>
+                  <td>172.19.140.30:51466->172.19.154.180:1433</td>
+                  <td>575</td>
+                  <td>349</td>
+                  <td>DC</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>TCP</td>
+                  <td>ESTABLISHED</td>
+                  <td>172.19.140.30:65289->172.19.154.180:1433</td>
+                  <td>2473</td>
+                  <td>349</td>
+                  <td>DC</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>TCP</td>
+                  <td>ESTABLISHED</td>
+                  <td>172.19.140.30:51614->172.19.154.180:1433</td>
+                  <td>574</td>
+                  <td>349</td>
+                  <td>DC</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>TCP</td>
+                  <td>ESTABLISHED</td>
+                  <td>172.19.140.30:58076->172.19.154.180:1433</td>
+                  <td>141196</td>
+                  <td>349</td>
+                  <td>DC</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>TCP</td>
+                  <td>ESTABLISHED</td>
+                  <td>172.19.140.30:51746->172.19.154.180:1433</td>
+                  <td>574</td>
+                  <td>349</td>
+                  <td>DC</td>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td>TCP</td>
+                  <td>ESTABLISHED</td>
+                  <td>172.19.140.30:51733->172.19.154.180:1433</td>
+                  <td>574</td>
+                  <td>349</td>
+                  <td>DC</td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td>TCP</td>
+                  <td>ESTABLISHED</td>
+                  <td>172.19.140.30:51610->172.19.154.180:1433</td>
+                  <td>575</td>
+                  <td>349</td>
+                  <td>DC</td>
+                </tr>
+                <tr>
+                  <td>13</td>
+                  <td>TCP</td>
+                  <td>ESTABLISHED</td>
+                  <td>172.19.140.30:51545->172.19.154.180:1433</td>
+                  <td>575</td>
+                  <td>349</td>
+                  <td>DC</td>
+                </tr>
+                <tr>
+                  <td>14</td>
+                  <td>TCP</td>
+                  <td>ESTABLISHED</td>
+                  <td>172.19.140.30:51052->172.19.154.180:1433</td>
+                  <td>576</td>
+                  <td>349</td>
+                  <td>DC</td>
+                </tr>
+                <tr>
+                  <td>15</td>
+                  <td>TCP</td>
+                  <td>ESTABLISHED</td>
+                  <td>172.19.140.30:51698->172.19.154.180:1433</td>
+                  <td>574</td>
+                  <td>349</td>
+                  <td>DC</td>
+                </tr>
+                <tr>
+                  <td>16</td>
+                  <td>TCP</td>
+                  <td>ESTABLISHED</td>
+                  <td>172.19.140.30:51824->172.19.154.180:1433</td>
+                  <td>574</td>
+                  <td>349</td>
+                  <td>DC</td>
+                </tr>
+                <tr>
+                  <td>17</td>
+                  <td>TCP</td>
+                  <td>ESTABLISHED</td>
+                  <td>172.19.140.30:51557->172.19.154.180:1433</td>
+                  <td>575</td>
+                  <td>349</td>
+                  <td>DC</td>
+                </tr>
+                <tr>
+                  <td>18</td>
+                  <td>TCP</td>
+                  <td>ESTABLISHED</td>
+                  <td>172.19.140.30:65321->172.19.154.180:1433</td>
+                  <td>2390</td>
+                  <td>349</td>
+                  <td>DC</td>
+                </tr>
+                <tr>
+                  <td>19</td>
+                  <td>TCP</td>
+                  <td>ESTABLISHED</td>
+                  <td>172.19.140.30:51495->172.19.154.180:1433</td>
+                  <td>575</td>
+                  <td>349</td>
+                  <td>DC</td>
+                </tr>
+                <tr>
+                  <td>20</td>
+                  <td>TCP</td>
+                  <td>ESTABLISHED</td>
+                  <td>172.19.140.30:51815->172.19.154.180:1433</td>
+                  <td>574</td>
+                  <td>349</td>
+                  <td>DC</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="Routes" role="tabpanel" aria-labelledby="nav-Route-Status-tab">
+      <div class="container-fluid">
+        <div class="row">
+          <h2 class="bg-info text-white text-center p-2 m-2">Route Checking: {{ RouteName }}</h2>
+          <div class="container-fluid">
+            <table class="table table-hover">
+              <tr class="table-secondary" align="left">
+                <th>Routing Type</th>
+                <th>Default Gateway</th>
+                <th>vdom Name</th>
+              </tr>
+              <tr>
+                <td>{{ RoutingType }}</td>
+                <td>{{ DefaultGateway }}</td>
+                <td>{{ VdomNames }}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="Log-Details" role="tabpanel" aria-labelledby="nav-Log-Details-tab">
+      <div class="container-fluid mt-2">
+        <div id="accordion">
+          <div class="card">
+            <div class="card-header">
+              <a class="card-link" data-toggle="collapse" href="#Interface_Log_Details">Interface Log Details</a>
+            </div>
+            <div id="Interface_Log_Details" class="collapse" data-parent="#accordion">
+              <div class="card-body">
+                <p> get<br/>
+                  <br/>
+                  name                : port16<br/>
+                  vdom                : DMZ-Edge<br/>
+                  cli-conn-status     : 0<br/>
+                  fortilink           : disable<br/>
+                  mode                : static<br/>
+                  dhcp-relay-service  : disable<br/>
+                  management-ip       : 0.0.0.0 0.0.0.0<br/>
+                  ip                  : 172.19.148.1 255.255.255.192<br/>
+                  allowaccess         : ping<br/>
+                  fail-detect         : disable<br/>
+                  arpforward          : enable<br/>
+                  broadcast-forward   : disable<br/>
+                  bfd                 : global<br/>
+                  l2forward           : disable<br/>
+                  icmp-redirect       : enable<br/>
+                  vlanforward         : disable<br/>
+                  stpforward          : disable<br/>
+                  ips-sniffer-mode    : disable<br/>
+                  ident-accept        : disable<br/>
+                  ipmac               : disable<br/>
+                  subst               : disable<br/>
+                  substitute-dst-mac  : 00:00:00:00:00:00<br/>
+                  status              : up<br/>
+                  netbios-forward     : disable<br/>
+                  wins-ip             : 0.0.0.0<br/>
+                  type                : physical<br/>
+                  netflow-sampler     : disable<br/>
+                  sflow-sampler       : disable<br/>
+                  scan-botnet-connections: disable<br/>
+                  src-check           : enable<br/>
+                  sample-rate         : 2000<br/>
+                  polling-interval    : 20<br/>
+                  sample-direction    : both<br/>
+                  explicit-web-proxy  : disable<br/>
+                  explicit-ftp-proxy  : disable<br/>
+                  proxy-captive-portal: disable<br/>
+                  tcp-mss             : 0<br/>
+                  mediatype           : serdes-sfp<br/>
+                  inbandwidth         : 0<br/>
+                  outbandwidth        : 0<br/>
+                  spillover-threshold : 0<br/>
+                  ingress-spillover-threshold: 0<br/>
+                  weight              : 0<br/>
+                  external            : disable<br/>
+                  devindex            : 38<br/>
+                  description         :<br/>
+                  alias               : UpStream SRV Zone<br/>
+                  security-mode       : none<br/>
+                  device-identification: enable<br/>
+                  device-user-identification: enable<br/>
+                  device-identification-active-scan: disable<br/>
+                  device-access-list  :<br/>
+                  lldp-transmission   : vdom<br/>
+                  fortiheartbeat      : disable<br/>
+                  estimated-upstream-bandwidth: 0<br/>
+                  estimated-downstream-bandwidth: 0<br/>
+                  vrrp-virtual-mac    : disable<br/>
+                  vrrp:<br/>
+                  role                : undefined<br/>
+                  snmp-index          : 18<br/>
+                  secondary-IP        : disable<br/>
+                  preserve-session-route: disable<br/>
+                  auto-auth-extension-device: disable<br/>
+                  ap-discover         : enable<br/>
+                  ipv6:<br/>
+                  ip6-mode            : static<br/>
+                  nd-mode             : basic<br/>
+                  ip6-address         : ::/0<br/>
+                  ip6-allowaccess     :<br/>
+                  ip6-reachable-time  : 0<br/>
+                  ip6-retrans-time    : 0<br/>
+                  ip6-hop-limit       : 0<br/>
+                  dhcp6-prefix-delegation: disable<br/>
+                  delegated-prefix	    : ::/0<br/>
+                  preferred-life-time	    : 0<br/>
+                  valid-life-time	    : 0<br/>
+                  delegated-DNS1	    : ::<br/>
+                  delegated-DNS2	    : ::<br/>
+                  delegated-domain	  :<br/>
+                  dhcp6-information-request: disable<br/>
+                  ip6-send-adv        : disable<br/>
+                  autoconf            : disable<br/>
+                  dhcp6-relay-service : disable<br/>
+                  speed               : 1000full<br/>
+                  mtu-override        : disable<br/>
+                  wccp                : disable<br/>
+                  drop-overlapped-fragment: disable<br/>
+                  drop-fragment       : disable<br/>
+                  <br/>
+                  <br/>
+                  Paradise-2 (port16) #<br/>
+                  get | grep -i status<br/>
+                  <br/>
+                  cli-conn-status     : 0<br/>
+                  status              : down<br/>
+                  <br/>
+                  Paradise-2 (port1) #<br/>
+            	  </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <a class="collapsed card-link" data-toggle="collapse" href="#CPU_Log_Details">CPU Log Details</a>
+            </div>
+            <div id="CPU_Log_Details" class="collapse" data-parent="#accordion">
+              <div class="card-body">
+                <p> get system performance status<br/>
+                	<br/>
+                	CPU states: 2% user 3% system 0% nice 95% idle 0% iowait 0% irq 0% softirq<br/>
+                	CPU0 states: 0% user 2% system 0% nice 97% idle 0% iowait 0% irq 1% softirq<br/>
+                	CPU1 states: 0% user 0% system 0% nice 100% idle 0% iowait 0% irq 0% softirq<br/>
+                	CPU2 states: 1% user 5% system 0% nice 94% idle 0% iowait 0% irq 0% softirq<br/>
+                	CPU3 states: 0% user 0% system 0% nice 100% idle 0% iowait 0% irq 0% softirq<br/>
+                	CPU4 states: 2% user 2% system 0% nice 96% idle 0% iowait 0% irq 0% softirq<br/>
+                	CPU5 states: 2% user 6% system 0% nice 92% idle 0% iowait 0% irq 0% softirq<br/>
+                	CPU6 states: 3% user 7% system 0% nice 90% idle 0% iowait 0% irq 0% softirq<br/>
+                	CPU7 states: 5% user 6% system 0% nice 89% idle 0% iowait 0% irq 0% softirq<br/>
+                	CPU8 states: 4% user 7% system 0% nice 89% idle 0% iowait 0% irq 0% softirq<br/>
+                	CPU9 states: 4% user 4% system 0% nice 92% idle 0% iowait 0% irq 0% softirq<br/>
+                	CPU10 states: 0% user 1% system 0% nice 99% idle 0% iowait 0% irq 0% softirq<br/>
+                	CPU11 states: 1% user 1% system 0% nice 98% idle 0% iowait 0% irq 0% softirq<br/>
+                	Memory: 32972864k total, 8564304k used (25%), 24408560k free (75%)<br/>
+                	Average network usage: 131119 / 131140 kbps in 1 minute, 121829 / 121845 kbps in 10 minutes, 114828 / 114794 kbps in 30 minutes<br/>
+                	Average sessions: 15251 sessions in 1 minute, 12947 sessions in 10 minutes, 11683 sessions in 30 minutes<br/>
+                	Average session setup rate: 482 sessions per second in last 1 minute, 348 sessions per second in last 10 minutes, 170 sessions per second in last 30 minutes<br/>
+                	Average NPU sessions: 3919 sessions in last 1 minute, 3109 sessions in last 10 minutes, 1742 sessions in last 30 minutes<br/>
+                	--More--<br/>
+                	<br/>
+                	Average nTurbo sessions: 268 sessions in last 1 minute, 268 sessions in last 10 minutes, 273 sessions in last 30 minutes<br/>
+                	Virus caught: 0 total in 1 minute<br/>
+                	IPS attacks blocked: 0 total in 1 minute<br/>
+                	Uptime: 86 days,  10 hours,  2 minutes<br/>
+                	<br/>
+                	Paradise-2 (global) #<br/>
+              	</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <a class="collapsed card-link" data-toggle="collapse" href="#Memory_Log_Details">Memory Log Details</a>
+            </div>
+            <div id="Memory_Log_Details" class="collapse" data-parent="#accordion">
+              <div class="card-body">
+                <p> Memory: 32972864k total, 8564304k used (25%), 24408560k free (75%)<br/>
+	              </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <a class="collapsed card-link" data-toggle="collapse" href="#CPU_Temperature_Log_Details">CPU Temperature Log Details</a>
+            </div>
+            <div id="CPU_Temperature_Log_Details" class="collapse" data-parent="#accordion">
+              <div class="card-body">
+                <p> CPU Core 0        alarm=0  value=45  threshold_status=0<br/>
+                	CPU Core 1        alarm=0  value=46  threshold_status=0<br/>
+                	CPU Core 2        alarm=0  value=46  threshold_status=0<br/>
+                	CPU Core 3        alarm=0  value=45  threshold_status=0<br/>
+                	CPU Core 4        alarm=0  value=45  threshold_status=0<br/>
+                	CPU Core 5        alarm=0  value=46  threshold_status=0<br/>
+              	</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <a class="collapsed card-link" data-toggle="collapse" href="#Power_Temperature_Log_Details">Power Temperature Log Details</a>
+            </div>
+            <div id="Power_Temperature_Log_Details" class="collapse" data-parent="#accordion">
+              <div class="card-body">
+                <p> PS1 Temp          alarm=0  value=22  threshold_status=0<br/>
+              	   PS2 Temp          alarm=0  value=20  threshold_status=0<br/>
+              	</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <a class="collapsed card-link" data-toggle="collapse" href="#Session_Log_Details">Session Log Details</a>
+            </div>
+            <div id="Session_Log_Details" class="collapse" data-parent="#accordion">
+              <div class="card-body">
+                <p> diagnose sys session list<br/>
+                  session info: proto=6 proto_state=01 duration=575 expire=3248 timeout=3600 flags=00000000 sockflag=00000000 sockport=0 av_idx=0 use=4<br/>
+                	origin-shaper=<br/>
+                	reply-shaper=<br/>
+                	per_ip_shaper=<br/>
+                	ha_id=0 policy_dir=0 tunnel=/ vlan_cos=0/0<br/>
+                	state=log may_dirty br npu f00 app_valid<br/>
+                	statistic(bytes/packets/allow_err): org=205482/402/1 reply=31941/355/1 tuples=2<br/>
+                	tx speed(Bps/kbps): 357/2 rx speed(Bps/kbps): 55/0<br/>
+                	orgin->sink: org pre->post, reply pre->post dev=105->104/104->105 gwy=172.19.154.180/172.19.140.30<br/>
+                	hook=pre dir=org act=noop 172.19.140.30:51518->172.19.154.180:1433(0.0.0.0:0)<br/>
+                	hook=post dir=reply act=noop 172.19.154.180:1433->172.19.140.30:51518(0.0.0.0:0)<br/>
+                	pos/(before,after) 0/(0,0), 0/(0,0)<br/>
+                	misc=0 policy_id=349 auth_info=0 chk_client_info=0 vd=3<br/>
+                	serial=1876c550 tos=ff/ff app_list=2000 app=16197 url_cat=0<br/>
+                	dd_type=0 dd_mode=0<br/>
+                	npu_state=0x003c08<br/>
+                	npu info: flag=0x81/0x81, offload=8/8, ips_offload=0/0, epid=224/224, ipid=224/224, vlan=0x068c/0x068b<br/>
+                	vlifid=224/224, vtag_in=0x068c/0x068b in_npu=1/1, out_npu=1/1, fwd_en=0/0, qid=0/0<br/>
+                	<br/>
+                	session info: proto=6 proto_state=01 duration=574 expire=3286 timeout=3600 flags=00000000 sockflag=00000000 sockport=0 av_idx=0 use=4<br/>
+                	origin-shaper=<br/>
+                	reply-shaper=<br/>
+                	per_ip_shaper=<br/>
+                	ha_id=0 policy_dir=0 tunnel=/ vlan_cos=0/0<br/>
+                	state=log may_dirty br npu f00 app_valid<br/>
+                	statistic(bytes/packets/allow_err): org=205977/428/1 reply=32882/368/1 tuples=2<br/>
+                	tx speed(Bps/kbps): 358/2 rx speed(Bps/kbps): 57/0<br/>
+                	orgin->sink: org pre->post, reply pre->post dev=105->104/104->105 gwy=172.19.154.180/172.19.140.30<br/>
+                	hook=pre dir=org act=noop 172.19.140.30:51644->172.19.154.180:1433(0.0.0.0:0)<br/>
+                	hook=post dir=reply act=noop 172.19.154.180:1433->172.19.140.30:51644(0.0.0.0:0)<br/>
+                	pos/(before,after) 0/(0,0), 0/(0,0)<br/>
+                	misc=0 policy_id=349 auth_info=0 chk_client_info=0 vd=3<br/>
+                	serial=1876c602 tos=ff/ff app_list=2000 app=16197 url_cat=0<br/>
+                	dd_type=0 dd_mode=0<br/>
+                	npu_state=0x003c08<br/>
+                	npu info: flag=0x81/0x81, offload=8/8, ips_offload=0/0, epid=224/224, ipid=224/224, vlan=0x068c/0x068b<br/>
+                	vlifid=224/224, vtag_in=0x068c/0x068b in_npu=1/1, out_npu=1/1, fwd_en=0/0, qid=3/3<br/>
+                	<br/>
+                	session info: proto=6 proto_state=01 duration=574 expire=3249 timeout=3600 flags=00000000 sockflag=00000000 sockport=0 av_idx=0 use=4<br/>
+                	origin-shaper=<br/>
+                	reply-shaper=<br/>
+                	per_ip_shaper=<br/>
+                	ha_id=0 policy_dir=0 tunnel=/ vlan_cos=0/0<br/>
+                	state=log may_dirty br npu f00 app_valid<br/>
+                	statistic(bytes/packets/allow_err): org=203679/399/1 reply=31537/350/1 tuples=2<br/>
+                	tx speed(Bps/kbps): 354/2 rx speed(Bps/kbps): 54/0<br/>
+                	orgin->sink: org pre->post, reply pre->post dev=105->104/104->105 gwy=172.19.154.180/172.19.140.30<br/>
+                	hook=pre dir=org act=noop 172.19.140.30:51635->172.19.154.180:1433(0.0.0.0:0)<br/>
+                	hook=post dir=reply act=noop 172.19.154.180:1433->172.19.140.30:51635(0.0.0.0:0)<br/>
+                	pos/(before,after) 0/(0,0), 0/(0,0)<br/>
+                	misc=0 policy_id=349 auth_info=0 chk_client_info=0 vd=3<br/>
+                	serial=1876c5f0 tos=ff/ff app_list=2000 app=16197 url_cat=0<br/>
+                	dd_type=0 dd_mode=0<br/>
+                	npu_state=0x003c08<br/>
+                	npu info: flag=0x81/0x81, offload=8/8, ips_offload=0/0, epid=224/224, ipid=224/224, vlan=0x068c/0x068b<br/>
+                	vlifid=224/224, vtag_in=0x068c/0x068b in_npu=1/1, out_npu=1/1, fwd_en=0/0, qid=1/1<br/>
+                	<br/>
+                	session info: proto=6 proto_state=01 duration=574 expire=3247 timeout=3600 flags=00000000 sockflag=00000000 sockport=0 av_idx=0 use=4<br/>
+                	origin-shaper=<br/>
+                	reply-shaper=<br/>
+                	per_ip_shaper=<br/>
+                	ha_id=0 policy_dir=0 tunnel=/ vlan_cos=0/0<br/>
+                	state=log may_dirty br npu f00 app_valid<br/>
+                	statistic(bytes/packets/allow_err): org=203111/389/1 reply=31577/351/1 tuples=2<br/>
+                	tx speed(Bps/kbps): 353/2 rx speed(Bps/kbps): 54/0<br/>
+                	orgin->sink: org pre->post, reply pre->post dev=105->104/104->105 gwy=172.19.154.180/172.19.140.30<br/>
+                	hook=pre dir=org act=noop 172.19.140.30:51770->172.19.154.180:1433(0.0.0.0:0)<br/>
+                	hook=post dir=reply act=noop 172.19.154.180:1433->172.19.140.30:51770(0.0.0.0:0)<br/>
+                	pos/(before,after) 0/(0,0), 0/(0,0)<br/>
+                	misc=0 policy_id=349 auth_info=0 chk_client_info=0 vd=3<br/>
+                	serial=1876c701 tos=ff/ff app_list=2000 app=16197 url_cat=0<br/>
+                	dd_type=0 dd_mode=0<br/>
+                	npu_state=0x003c08<br/>
+                	npu info: flag=0x81/0x81, offload=8/8, ips_offload=0/0, epid=224/224, ipid=224/224, vlan=0x068c/0x068b<br/>
+                	vlifid=224/224, vtag_in=0x068c/0x068b in_npu=1/1, out_npu=1/1, fwd_en=0/0, qid=5/5<br/>
+                	<br/>
+                	session info: proto=6 proto_state=01 duration=141226 expire=3270 timeout=3600 flags=00000000 sockflag=00000000 sockport=0 av_idx=0 use=4<br/>
+                	origin-shaper=<br/>
+                	reply-shaper=<br/>
+                	per_ip_shaper=<br/>
+                	ha_id=0 policy_dir=0 tunnel=/ vlan_cos=0/0<br/>
+                	state=log may_dirty br npu f00 app_valid<br/>
+                	statistic(bytes/packets/allow_err): org=725763/10626/1 reply=998716/8276/1 tuples=2<br/>
+                	tx speed(Bps/kbps): 5/0 rx speed(Bps/kbps): 7/0<br/>
+                	orgin->sink: org pre->post, reply pre->post dev=105->104/104->105 gwy=0.0.0.0/0.0.0.0<br/>
+                	hook=pre dir=org act=noop 172.19.140.30:58065->172.19.154.180:1433(0.0.0.0:0)<br/>
+                	hook=post dir=reply act=noop 172.19.154.180:1433->172.19.140.30:58065(0.0.0.0:0)<br/>
+                	pos/(before,after) 0/(0,0), 0/(0,0)<br/>
+                	misc=0 policy_id=349 auth_info=0 chk_client_info=0 vd=3<br/>
+                	serial=17946633 tos=ff/ff app_list=2000 app=16197 url_cat=0<br/>
+                	dd_type=0 dd_mode=0<br/>
+                	npu_state=0x003c08<br/>
+                	npu info: flag=0x81/0x81, offload=8/8, ips_offload=0/0, epid=224/224, ipid=224/224, vlan=0x068c/0x068b<br/>
+                	vlifid=224/224, vtag_in=0x068c/0x068b in_npu=1/1, out_npu=1/1, fwd_en=0/0, qid=1/1<br/>
+                	<br/>
+                	session info: proto=6 proto_state=01 duration=575 expire=3248 timeout=3600 flags=00000000 sockflag=00000000 sockport=0 av_idx=0 use=4<br/>
+                	origin-shaper=<br/>
+                	reply-shaper=<br/>
+                	per_ip_shaper=<br/>
+                	ha_id=0 policy_dir=0 tunnel=/ vlan_cos=0/0<br/>
+                	state=log may_dirty br npu f00 app_valid<br/>
+                	statistic(bytes/packets/allow_err): org=205410/400/1 reply=31901/354/1 tuples=2<br/>
+                	tx speed(Bps/kbps): 357/2 rx speed(Bps/kbps): 55/0<br/>
+                	orgin->sink: org pre->post, reply pre->post dev=105->104/104->105 gwy=172.19.154.180/172.19.140.30<br/>
+                	hook=pre dir=org act=noop 172.19.140.30:51466->172.19.154.180:1433(0.0.0.0:0)<br/>
+                	hook=post dir=reply act=noop 172.19.154.180:1433->172.19.140.30:51466(0.0.0.0:0)<br/>
+                	pos/(before,after) 0/(0,0), 0/(0,0)<br/>
+                	misc=0 policy_id=349 auth_info=0 chk_client_info=0 vd=3<br/>
+                	serial=1876c4ef tos=ff/ff app_list=2000 app=16197 url_cat=0<br/>
+                	dd_type=0 dd_mode=0<br/>
+                	npu_state=0x003c08<br/>
+                	npu info: flag=0x81/0x81, offload=8/8, ips_offload=0/0, epid=224/224, ipid=224/224, vlan=0x068c/0x068b<br/>
+                	vlifid=224/224, vtag_in=0x068c/0x068b in_npu=1/1, out_npu=1/1, fwd_en=0/0, qid=1/1<br/>
+                	<br/>
+                	session info: proto=6 proto_state=01 duration=2473 expire=3256 timeout=3600 flags=00000000 sockflag=00000000 sockport=0 av_idx=0 use=4<br/>
+                	origin-shaper=<br/>
+                	reply-shaper=<br/>
+                	per_ip_shaper=<br/>
+                	ha_id=0 policy_dir=0 tunnel=/ vlan_cos=0/0<br/>
+                	state=log may_dirty ndr br npu f00 app_valid<br/>
+                	statistic(bytes/packets/allow_err): org=12227/169/1 reply=16059/130/1 tuples=2<br/>
+                	tx speed(Bps/kbps): 4/0 rx speed(Bps/kbps): 6/0<br/>
+                	orgin->sink: org pre->post, reply pre->post dev=105->104/104->105 gwy=172.19.154.180/172.19.140.30<br/>
+                	hook=pre dir=org act=noop 172.19.140.30:65289->172.19.154.180:1433(0.0.0.0:0)<br/>
+                	hook=post dir=reply act=noop 172.19.154.180:1433->172.19.140.30:65289(0.0.0.0:0)<br/>
+                	pos/(before,after) 0/(0,0), 0/(0,0)<br/>
+                	misc=0 policy_id=349 auth_info=0 chk_client_info=0 vd=3<br/>
+                	serial=186d6bb1 tos=ff/ff app_list=2000 app=16197 url_cat=0<br/>
+                	dd_type=0 dd_mode=0<br/>
+                	npu_state=0x003c94 ips_offload<br/>
+                	npu info: flag=0x81/0x81, offload=8/8, ips_offload=1/1, epid=6/6, ipid=224/224, vlan=0x068c/0x068b<br/>
+                	vlifid=224/224, vtag_in=0x068c/0x068b in_npu=1/1, out_npu=1/1, fwd_en=0/0, qid=1/1<br/>
+                	<br/>
+                	session info: proto=6 proto_state=01 duration=574 expire=3280 timeout=3600 flags=00000000 sockflag=00000000 sockport=0 av_idx=0 use=4<br/>
+                	origin-shaper=<br/>
+                	reply-shaper=<br/>
+                	per_ip_shaper=<br/>
+                	ha_id=0 policy_dir=0 tunnel=/ vlan_cos=0/0<br/>
+                	state=log may_dirty br npu f00 app_valid<br/>
+                	statistic(bytes/packets/allow_err): org=205033/404/1 reply=32779/364/1 tuples=2<br/>
+                	tx speed(Bps/kbps): 356/2 rx speed(Bps/kbps): 57/0<br/>
+                	orgin->sink: org pre->post, reply pre->post dev=105->104/104->105 gwy=172.19.154.180/172.19.140.30<br/>
+                	hook=pre dir=org act=noop 172.19.140.30:51614->172.19.154.180:1433(0.0.0.0:0)<br/>
+                	hook=post dir=reply act=noop 172.19.154.180:1433->172.19.140.30:51614(0.0.0.0:0)<br/>
+                	pos/(before,after) 0/(0,0), 0/(0,0)<br/>
+                	misc=0 policy_id=349 auth_info=0 chk_client_info=0 vd=3<br/>
+                	serial=1876c5da tos=ff/ff app_list=2000 app=16197 url_cat=0<br/>
+                	dd_type=0 dd_mode=0<br/>
+                	npu_state=0x003c08<br/>
+                	npu info: flag=0x81/0x81, offload=8/8, ips_offload=0/0, epid=224/224, ipid=224/224, vlan=0x068c/0x068b<br/>
+                	vlifid=224/224, vtag_in=0x068c/0x068b in_npu=1/1, out_npu=1/1, fwd_en=0/0, qid=3/3<br/>
+                	<br/>
+                	session info: proto=6 proto_state=01 duration=141196 expire=3270 timeout=3600 flags=00000000 sockflag=00000000 sockport=0 av_idx=0 use=4<br/>
+                	origin-shaper=<br/>
+                	reply-shaper=<br/>
+                	per_ip_shaper=<br/>
+                	ha_id=0 policy_dir=0 tunnel=/ vlan_cos=0/0<br/>
+                	state=log may_dirty br npu f00 app_valid<br/>
+                	statistic(bytes/packets/allow_err): org=724581/10598/1 reply=997826/8250/1 tuples=2<br/>
+                	tx speed(Bps/kbps): 5/0 rx speed(Bps/kbps): 7/0<br/>
+                	orgin->sink: org pre->post, reply pre->post dev=105->104/104->105 gwy=0.0.0.0/0.0.0.0<br/>
+                	hook=pre dir=org act=noop 172.19.140.30:58076->172.19.154.180:1433(0.0.0.0:0)<br/>
+                	hook=post dir=reply act=noop 172.19.154.180:1433->172.19.140.30:58076(0.0.0.0:0)<br/>
+                	pos/(before,after) 0/(0,0), 0/(0,0)<br/>
+                	misc=0 policy_id=349 auth_info=0 chk_client_info=0 vd=3<br/>
+                	serial=1794722e tos=ff/ff app_list=2000 app=16197 url_cat=0<br/>
+                	dd_type=0 dd_mode=0<br/>
+                	npu_state=0x003c08<br/>
+                	npu info: flag=0x81/0x81, offload=8/8, ips_offload=0/0, epid=224/224, ipid=224/224, vlan=0x068c/0x068b<br/>
+                	vlifid=224/224, vtag_in=0x068c/0x068b in_npu=1/1, out_npu=1/1, fwd_en=0/0, qid=3/3<br/>
+                	<br/>
+                	session info: proto=6 proto_state=01 duration=574 expire=3246 timeout=3600 flags=00000000 sockflag=00000000 sockport=0 av_idx=0 use=4<br/>
+                	origin-shaper=<br/>
+                	reply-shaper=<br/>
+                	per_ip_shaper=<br/>
+                	ha_id=0 policy_dir=0 tunnel=/ vlan_cos=0/0<br/>
+                	state=log may_dirty br npu f00 app_valid<br/>
+                	statistic(bytes/packets/allow_err): org=204778/391/1 reply=31901/354/1 tuples=2<br/>
+                	tx speed(Bps/kbps): 356/2 rx speed(Bps/kbps): 55/0<br/>
+                	orgin->sink: org pre->post, reply pre->post dev=105->104/104->105 gwy=172.19.154.180/172.19.140.30<br/>
+                	hook=pre dir=org act=noop 172.19.140.30:51746->172.19.154.180:1433(0.0.0.0:0)<br/>
+                	hook=post dir=reply act=noop 172.19.154.180:1433->172.19.140.30:51746(0.0.0.0:0)<br/>
+                	pos/(before,after) 0/(0,0), 0/(0,0)<br/>
+                	misc=0 policy_id=349 auth_info=0 chk_client_info=0 vd=3<br/>
+                	serial=1876c6a2 tos=ff/ff app_list=2000 app=16197 url_cat=0<br/>
+                	dd_type=0 dd_mode=0<br/>
+                	npu_state=0x003c08<br/>
+                	npu info: flag=0x81/0x81, offload=8/8, ips_offload=0/0, epid=224/224, ipid=224/224, vlan=0x068c/0x068b<br/>
+                	vlifid=224/224, vtag_in=0x068c/0x068b in_npu=1/1, out_npu=1/1, fwd_en=0/0, qid=0/0<br/>
+                	<br/>
+                	session info: proto=6 proto_state=01 duration=574 expire=3249 timeout=3600 flags=00000000 sockflag=00000000 sockport=0 av_idx=0 use=4<br/>
+                	origin-shaper=<br/>
+                	reply-shaper=<br/>
+                	per_ip_shaper=<br/>
+                	ha_id=0 policy_dir=0 tunnel=/ vlan_cos=0/0<br/>
+                	state=log may_dirty br npu f00 app_valid<br/>
+                	statistic(bytes/packets/allow_err): org=204812/382/1 reply=31861/353/1 tuples=2<br/>
+                	tx speed(Bps/kbps): 356/2 rx speed(Bps/kbps): 55/0<br/>
+                	orgin->sink: org pre->post, reply pre->post dev=105->104/104->105 gwy=172.19.154.180/172.19.140.30<br/>
+                	hook=pre dir=org act=noop 172.19.140.30:51733->172.19.154.180:1433(0.0.0.0:0)<br/>
+                	hook=post dir=reply act=noop 172.19.154.180:1433->172.19.140.30:51733(0.0.0.0:0)<br/>
+                	pos/(before,after) 0/(0,0), 0/(0,0)<br/>
+                	misc=0 policy_id=349 auth_info=0 chk_client_info=0 vd=3<br/>
+                	serial=1876c68c tos=ff/ff app_list=2000 app=16197 url_cat=0<br/>
+                	dd_type=0 dd_mode=0<br/>
+                	npu_state=0x003c08<br/>
+                	npu info: flag=0x81/0x81, offload=8/8, ips_offload=0/0, epid=224/224, ipid=224/224, vlan=0x068c/0x068b<br/>
+                	vlifid=224/224, vtag_in=0x068c/0x068b in_npu=1/1, out_npu=1/1, fwd_en=0/0, qid=3/3<br/>
+                	<br/>
+                	session info: proto=6 proto_state=01 duration=575 expire=3248 timeout=3600 flags=00000000 sockflag=00000000 sockport=0 av_idx=0 use=4<br/>
+                	origin-shaper=<br/>
+                	reply-shaper=<br/>
+                	per_ip_shaper=<br/>
+                	ha_id=0 policy_dir=0 tunnel=/ vlan_cos=0/0<br/>
+                	state=log may_dirty br npu f00 app_valid<br/>
+                	statistic(bytes/packets/allow_err): org=204866/391/1 reply=31861/353/1 tuples=2<br/>
+                	tx speed(Bps/kbps): 356/2 rx speed(Bps/kbps): 55/0<br/>
+                	orgin->sink: org pre->post, reply pre->post dev=105->104/104->105 gwy=172.19.154.180/172.19.140.30<br/>
+                	hook=pre dir=org act=noop 172.19.140.30:51610->172.19.154.180:1433(0.0.0.0:0)<br/>
+                	hook=post dir=reply act=noop 172.19.154.180:1433->172.19.140.30:51610(0.0.0.0:0)<br/>
+                	pos/(before,after) 0/(0,0), 0/(0,0)<br/>
+                	misc=0 policy_id=349 auth_info=0 chk_client_info=0 vd=3<br/>
+                	serial=1876c5d4 tos=ff/ff app_list=2000 app=16197 url_cat=0<br/>
+                	dd_type=0 dd_mode=0<br/>
+                	npu_state=0x003c08<br/>
+                	npu info: flag=0x81/0x81, offload=8/8, ips_offload=0/0, epid=224/224, ipid=224/224, vlan=0x068c/0x068b<br/>
+                	vlifid=224/224, vtag_in=0x068c/0x068b in_npu=1/1, out_npu=1/1, fwd_en=0/0, qid=1/1<br/>
+                	<br/>
+                	session info: proto=6 proto_state=01 duration=575 expire=3247 timeout=3600 flags=00000000 sockflag=00000000 sockport=0 av_idx=0 use=4<br/>
+                	origin-shaper=<br/>
+                	reply-shaper=<br/>
+                	per_ip_shaper=<br/>
+                	ha_id=0 policy_dir=0 tunnel=/ vlan_cos=0/0<br/>
+                	state=log may_dirty br npu f00 app_valid<br/>
+                	statistic(bytes/packets/allow_err): org=203045/389/1 reply=31764/352/1 tuples=2<br/>
+                	tx speed(Bps/kbps): 353/2 rx speed(Bps/kbps): 55/0<br/>
+                	orgin->sink: org pre->post, reply pre->post dev=105->104/104->105 gwy=172.19.154.180/172.19.140.30<br/>
+                	hook=pre dir=org act=noop 172.19.140.30:51545->172.19.154.180:1433(0.0.0.0:0)<br/>
+                	hook=post dir=reply act=noop 172.19.154.180:1433->172.19.140.30:51545(0.0.0.0:0)<br/>
+                	pos/(before,after) 0/(0,0), 0/(0,0)<br/>
+                	misc=0 policy_id=349 auth_info=0 chk_client_info=0 vd=3<br/>
+                	serial=1876c574 tos=ff/ff app_list=2000 app=16197 url_cat=0<br/>
+                	dd_type=0 dd_mode=0<br/>
+                	npu_state=0x003c08<br/>
+                	npu info: flag=0x81/0x81, offload=8/8, ips_offload=0/0, epid=224/224, ipid=224/224, vlan=0x068c/0x068b<br/>
+                	vlifid=224/224, vtag_in=0x068c/0x068b in_npu=1/1, out_npu=1/1, fwd_en=0/0, qid=3/3<br/>
+                	<br/>
+                	session info: proto=6 proto_state=01 duration=576 expire=3251 timeout=3600 flags=00000000 sockflag=00000000 sockport=0 av_idx=0 use=4<br/>
+                	origin-shaper=<br/>
+                	reply-shaper=<br/>
+                	per_ip_shaper=<br/>
+                	ha_id=0 policy_dir=0 tunnel=/ vlan_cos=0/0<br/>
+                	state=log may_dirty br npu f00 app_valid<br/>
+                	statistic(bytes/packets/allow_err): org=202937/389/1 reply=31889/354/1 tuples=2<br/>
+                	tx speed(Bps/kbps): 351/2 rx speed(Bps/kbps): 55/0<br/>
+                	orgin->sink: org pre->post, reply pre->post dev=105->104/104->105 gwy=172.19.154.180/172.19.140.30<br/>
+                	hook=pre dir=org act=noop 172.19.140.30:51052->172.19.154.180:1433(0.0.0.0:0)<br/>
+                	hook=post dir=reply act=noop 172.19.154.180:1433->172.19.140.30:51052(0.0.0.0:0)<br/>
+                	pos/(before,after) 0/(0,0), 0/(0,0)<br/>
+                	misc=0 policy_id=349 auth_info=0 chk_client_info=0 vd=3<br/>
+                	serial=1876c17f tos=ff/ff app_list=2000 app=16197 url_cat=0<br/>
+                	dd_type=0 dd_mode=0<br/>
+                	npu_state=0x003c08<br/>
+                	npu info: flag=0x81/0x81, offload=8/8, ips_offload=0/0, epid=224/224, ipid=224/224, vlan=0x068c/0x068b<br/>
+                	vlifid=224/224, vtag_in=0x068c/0x068b in_npu=1/1, out_npu=1/1, fwd_en=0/0, qid=4/4<br/>
+                	<br/>
+                	session info: proto=6 proto_state=01 duration=574 expire=3251 timeout=3600 flags=00000000 sockflag=00000000 sockport=0 av_idx=0 use=4<br/>
+                	origin-shaper=<br/>
+                	reply-shaper=<br/>
+                	per_ip_shaper=<br/>
+                	ha_id=0 policy_dir=0 tunnel=/ vlan_cos=0/0<br/>
+                	state=log may_dirty br npu f00 app_valid<br/>
+                	statistic(bytes/packets/allow_err): org=205436/403/1 reply=31861/353/1 tuples=2<br/>
+                	tx speed(Bps/kbps): 357/2 rx speed(Bps/kbps): 55/0<br/>
+                	orgin->sink: org pre->post, reply pre->post dev=105->104/104->105 gwy=172.19.154.180/172.19.140.30<br/>
+                	hook=pre dir=org act=noop 172.19.140.30:51698->172.19.154.180:1433(0.0.0.0:0)<br/>
+                	hook=post dir=reply act=noop 172.19.154.180:1433->172.19.140.30:51698(0.0.0.0:0)<br/>
+                	pos/(before,after) 0/(0,0), 0/(0,0)<br/>
+                	misc=0 policy_id=349 auth_info=0 chk_client_info=0 vd=3<br/>
+                	serial=1876c65e tos=ff/ff app_list=2000 app=16197 url_cat=0<br/>
+                	dd_type=0 dd_mode=0<br/>
+                	npu_state=0x003c08<br/>
+                	npu info: flag=0x81/0x81, offload=8/8, ips_offload=0/0, epid=224/224, ipid=224/224, vlan=0x068c/0x068b<br/>
+                	vlifid=224/224, vtag_in=0x068c/0x068b in_npu=1/1, out_npu=1/1, fwd_en=0/0, qid=0/0<br/>
+                	<br/>
+                	session info: proto=6 proto_state=01 duration=574 expire=3288 timeout=3600 flags=00000000 sockflag=00000000 sockport=0 av_idx=0 use=4<br/>
+                	origin-shaper=<br/>
+                	reply-shaper=<br/>
+                	per_ip_shaper=<br/>
+                	ha_id=0 policy_dir=0 tunnel=/ vlan_cos=0/0<br/>
+                	state=log may_dirty br npu f00 app_valid<br/>
+                	statistic(bytes/packets/allow_err): org=205415/414/1 reply=33002/371/1 tuples=2<br/>
+                	tx speed(Bps/kbps): 357/2 rx speed(Bps/kbps): 57/0<br/>
+                	orgin->sink: org pre->post, reply pre->post dev=105->104/104->105 gwy=172.19.154.180/172.19.140.30<br/>
+                	hook=pre dir=org act=noop 172.19.140.30:51824->172.19.154.180:1433(0.0.0.0:0)<br/>
+                	hook=post dir=reply act=noop 172.19.154.180:1433->172.19.140.30:51824(0.0.0.0:0)<br/>
+                	pos/(before,after) 0/(0,0), 0/(0,0)<br/>
+                	misc=0 policy_id=349 auth_info=0 chk_client_info=0 vd=3<br/>
+                	serial=1876c740 tos=ff/ff app_list=2000 app=16197 url_cat=0<br/>
+                	dd_type=0 dd_mode=0<br/>
+                	npu_state=0x003c08<br/>
+                	npu info: flag=0x81/0x81, offload=8/8, ips_offload=0/0, epid=224/224, ipid=224/224, vlan=0x068c/0x068b<br/>
+                	vlifid=224/224, vtag_in=0x068c/0x068b in_npu=1/1, out_npu=1/1, fwd_en=0/0, qid=0/0<br/>
+                	<br/>
+                	session info: proto=6 proto_state=01 duration=575 expire=3246 timeout=3600 flags=00000000 sockflag=00000000 sockport=0 av_idx=0 use=4<br/>
+                	origin-shaper=<br/>
+                	reply-shaper=<br/>
+                	per_ip_shaper=<br/>
+                	ha_id=0 policy_dir=0 tunnel=/ vlan_cos=0/0<br/>
+                	state=log may_dirty br npu f00 app_valid<br/>
+                	statistic(bytes/packets/allow_err): org=203107/395/1 reply=32005/355/1 tuples=2<br/>
+                	tx speed(Bps/kbps): 353/2 rx speed(Bps/kbps): 55/0<br/>
+                	orgin->sink: org pre->post, reply pre->post dev=105->104/104->105 gwy=172.19.154.180/172.19.140.30<br/>
+                	hook=pre dir=org act=noop 172.19.140.30:51557->172.19.154.180:1433(0.0.0.0:0)<br/>
+                	hook=post dir=reply act=noop 172.19.154.180:1433->172.19.140.30:51557(0.0.0.0:0)<br/>
+                	pos/(before,after) 0/(0,0), 0/(0,0)<br/>
+                	misc=0 policy_id=349 auth_info=0 chk_client_info=0 vd=3<br/>
+                	serial=1876c581 tos=ff/ff app_list=2000 app=16197 url_cat=0<br/>
+                	dd_type=0 dd_mode=0<br/>
+                	npu_state=0x003c08<br/>
+                	npu info: flag=0x81/0x81, offload=8/8, ips_offload=0/0, epid=224/224, ipid=224/224, vlan=0x068c/0x068b<br/>
+                	vlifid=224/224, vtag_in=0x068c/0x068b in_npu=1/1, out_npu=1/1, fwd_en=0/0, qid=4/4<br/>
+                	<br/>
+                	session info: proto=6 proto_state=01 duration=2390 expire=3249 timeout=3600 flags=00000000 sockflag=00000000 sockport=0 av_idx=0 use=4<br/>
+                	origin-shaper=<br/>
+                	reply-shaper=<br/>
+                	per_ip_shaper=<br/>
+                	ha_id=0 policy_dir=0 tunnel=/ vlan_cos=0/0<br/>
+                	state=log may_dirty ndr br npu f00 app_valid<br/>
+                	statistic(bytes/packets/allow_err): org=11837/163/1 reply=15710/127/1 tuples=2<br/>
+                	tx speed(Bps/kbps): 4/0 rx speed(Bps/kbps): 6/0<br/>
+                	orgin->sink: org pre->post, reply pre->post dev=105->104/104->105 gwy=172.19.154.180/172.19.140.30<br/>
+                	hook=pre dir=org act=noop 172.19.140.30:65321->172.19.154.180:1433(0.0.0.0:0)<br/>
+                	hook=post dir=reply act=noop 172.19.154.180:1433->172.19.140.30:65321(0.0.0.0:0)<br/>
+                	pos/(before,after) 0/(0,0), 0/(0,0)<br/>
+                	misc=0 policy_id=349 auth_info=0 chk_client_info=0 vd=3<br/>
+                	serial=186dbd6d tos=ff/ff app_list=2000 app=16197 url_cat=0<br/>
+                	dd_type=0 dd_mode=0<br/>
+                	npu_state=0x003c94 ips_offload<br/>
+                	npu info: flag=0x81/0x81, offload=8/8, ips_offload=1/1, epid=3/3, ipid=224/224, vlan=0x068c/0x068b<br/>
+                	vlifid=224/224, vtag_in=0x068c/0x068b in_npu=1/1, out_npu=1/1, fwd_en=0/0, qid=3/3<br/>
+                	<br/>
+                	session info: proto=6 proto_state=01 duration=575 expire=3253 timeout=3600 flags=00000000 sockflag=00000000 sockport=0 av_idx=0 use=4<br/>
+                	origin-shaper=<br/>
+                	reply-shaper=<br/>
+                	per_ip_shaper=<br/>
+                	ha_id=0 policy_dir=0 tunnel=/ vlan_cos=0/0<br/>
+                	state=log may_dirty br npu f00 app_valid<br/>
+                	statistic(bytes/packets/allow_err): org=204786/383/1 reply=31861/353/1 tuples=2<br/>
+                	tx speed(Bps/kbps): 356/2 rx speed(Bps/kbps): 55/0<br/>
+                	orgin->sink: org pre->post, reply pre->post dev=105->104/104->105 gwy=172.19.154.180/172.19.140.30<br/>
+                	hook=pre dir=org act=noop 172.19.140.30:51495->172.19.154.180:1433(0.0.0.0:0)<br/>
+                	hook=post dir=reply act=noop 172.19.154.180:1433->172.19.140.30:51495(0.0.0.0:0)<br/>
+                	pos/(before,after) 0/(0,0), 0/(0,0)<br/>
+                	misc=0 policy_id=349 auth_info=0 chk_client_info=0 vd=3<br/>
+                	serial=1876c51f tos=ff/ff app_list=2000 app=16197 url_cat=0<br/>
+                	dd_type=0 dd_mode=0<br/>
+                	npu_state=0x003c08<br/>
+                	npu info: flag=0x81/0x81, offload=8/8, ips_offload=0/0, epid=224/224, ipid=224/224, vlan=0x068c/0x068b<br/>
+                	vlifid=224/224, vtag_in=0x068c/0x068b in_npu=1/1, out_npu=1/1, fwd_en=0/0, qid=5/5<br/>
+                	<br/>
+                	session info: proto=6 proto_state=01 duration=574 expire=3244 timeout=3600 flags=00000000 sockflag=00000000 sockport=0 av_idx=0 use=4<br/>
+                	origin-shaper=<br/>
+                	reply-shaper=<br/>
+                	per_ip_shaper=<br/>
+                	ha_id=0 policy_dir=0 tunnel=/ vlan_cos=0/0<br/>
+                	state=log may_dirty br npu f00 app_valid<br/>
+                	statistic(bytes/packets/allow_err): org=7793758/14477/1 reply=1187637/13074/1 tuples=2<br/>
+                	tx speed(Bps/kbps): 13564/108 rx speed(Bps/kbps): 2066/16<br/>
+                	orgin->sink: org pre->post, reply pre->post dev=105->104/104->105 gwy=172.19.154.180/172.19.140.30<br/>
+                	hook=pre dir=org act=noop 172.19.140.30:51815->172.19.154.180:1433(0.0.0.0:0)<br/>
+                	hook=post dir=reply act=noop 172.19.154.180:1433->172.19.140.30:51815(0.0.0.0:0)<br/>
+                	pos/(before,after) 0/(0,0), 0/(0,0)<br/>
+                	misc=0 policy_id=349 auth_info=0 chk_client_info=0 vd=3<br/>
+                	serial=1876c721 tos=ff/ff app_list=2000 app=16197 url_cat=0<br/>
+                	dd_type=0 dd_mode=0<br/>
+                	npu_state=0x003c08<br/>
+                	npu info: flag=0x81/0x81, offload=8/8, ips_offload=0/0, epid=224/224, ipid=224/224, vlan=0x068c/0x068b<br/>
+                	vlifid=224/224, vtag_in=0x068c/0x068b in_npu=1/1, out_npu=1/1, fwd_en=0/0, qid=3/3<br/>
+                	total session 20<br/>
+                	<br/>
+              	</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <a class="collapsed card-link" data-toggle="collapse" href="#Route_Log_Details">Route Log Details</a>
+            </div>
+            <div id="Route_Log_Details" class="collapse" data-parent="#accordion">
+              <div class="card-body">
+                <p>
+              	</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    $(document).ready(function() {
+    $('table.display').DataTable();
+    } );
+  </script>
+</body>
+</html>
